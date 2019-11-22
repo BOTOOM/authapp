@@ -54,7 +54,7 @@ export class AuthService {
     );
   }
 
-  private localAuthSetup() {
+  localAuthSetup() {
     // This should only be called on app initialization
     // Set up local authentication streams
     const checkAuth$ = this.isAuthenticated$.pipe(
