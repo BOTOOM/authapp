@@ -1,0 +1,22 @@
+<h1>Perfil de usuario</h1>
+<br>
+
+<pre *ngIf="auth.userProfile$ | async as profile">
+        <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{{ profile.picture }}"
+                                alt="img Persona" class="personaImg rounded-circle" height="150px" width="150px">
+                        </div>
+                        <div>
+                            <h4>Nombre: {{profile.name}}</h4>
+                            <h4>Usuario: {{profile.nickname}}</h4>
+                            <h4>Correo: {{profile.email}}</h4>
+                        </div>
+                      <!-- This is some text within a card body. -->
+                    </div>
+                  </div>
+            </div>
+    <!-- <code>{{ profile | json }}</code> -->
+</pre>
